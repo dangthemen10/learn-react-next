@@ -1,5 +1,5 @@
-import ChildComponent from "@/pages/components/ChildComponent";
-import Counter from "@/pages/components/Counter";
+import ChildComponent from "@/components/ChildComponent";
+import Counter from "@/components/Counter";
 
 const StudyComponent = () => {
 

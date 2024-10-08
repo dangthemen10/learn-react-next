@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 export default function ExpensiveComputation({ number }) {
-  // Hàm mô phỏng một phép tính nặng nề
+  // Hàm mô phỏng một phép tính phức tạp
   const computeExpensiveValue = (num) => {
     console.log("Computing...");
     let sum = 0;

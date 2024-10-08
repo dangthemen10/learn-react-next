@@ -25,6 +25,10 @@ export default function Home() {
           <Link href="/react/hooks/side-effect">useEffect Hook Example</Link>
           <Link href="/react/hooks/use-ref">useRef Hook Example</Link>
           <Link href="/react/hooks/use-memo">useMemo Hook Example</Link>
+          <Link href="/react/hooks/use-context">useContext Hook Example</Link>
+          <Link href="/react/hooks/use-reducer">useReducer Hook Example</Link>
+          <Link href="/react/hooks/use-callback">useCallback Hook Example</Link>
+          <Link href="/react/hooks/custom-hook">customHook Hook Example</Link>
         </main>
       </div>
     </>

@@ -231,12 +231,11 @@ React giúp xây dựng giao diện người dùng dựa trên JSX (môt cú ph�
 - Cộng đồng lớn và hệ sinh thái mạnh mẽ.
 - Hỗ trợ Server-Side Rendering giúp tối ưu SEO.
 - Quản lý state hiệu quả với Hooks.
-- Học dễ dàng và nhanh chóng (Easy to Learn): ReactJS chỉ tập trung vào view layer (giao diện) trong mô hình MVC, do đó dễ học hơn so với các framework toàn diện như Angular hoặc Vue.js. Chỉ cần có kiến thức về JavaScript và hiểu cơ bản về cách làm việc với DOM là có thể bắt đầu với React.
+- Học dễ dàng và nhanh chóng (Easy to Learn): ReactJS chỉ tập trung vào view layer, do đó dễ học hơn so với các framework toàn diện như Angular hoặc Vue.js. Chỉ cần có kiến thức về JavaScript và hiểu cơ bản về cách làm việc với DOM là có thể bắt đầu với React.
 
 ### 2.2 Nhược điểm của ReactJS
 
 - Cập nhật liên tục, gây khó khăn trong việc theo kịp xu hướng.
-- Tài liệu không nhất quán.
 - Chỉ tập trung vào view layer, cần thêm thư viện khác cho các tính năng khác như routing (định tuyến) hay quản lý trạng thái phức tạp (như Redux).
 - JSX có thể khó hiểu cho người mới.
 
@@ -570,7 +569,7 @@ Trong lần render mới, React sẽ sử dụng giá trị state cập nhật �
 
 #### 5.2 useEffect() – Quản lý side effects
 
-- Công dụng: `useEffect` là hook được sử dụng để xử lý side effects trong functional component. Side effects là các tác vụ mà không trực tiếp ảnh hưởng đến việc render UI, ví dụ như gọi API, thao tác với DOM, hoặc thiết lập bộ hẹn giờ (timers).
+- Công dụng: `useEffect` là hook được sử dụng để xử lý các tác vụ phụ (side effects) trong functional component. Side effects là các tác vụ mà không trực tiếp ảnh hưởng đến việc render UI, ví dụ như gọi API, thao tác với DOM, hoặc thiết lập bộ hẹn giờ (timers).
 - `useEffect` nhận vào một hàm callback và tùy chọn là một mảng phụ thuộc (dependency array).
 - Hàm callback sẽ được thực thi sau khi render.
 - Cú pháp:
@@ -851,35 +850,7 @@ Trong lần render mới, React sẽ sử dụng giá trị state cập nhật �
   }
   ```
 
-### 6. Render and Commit
-
-Trước khi các thành phần của  được hiển thị trên màn hình, chúng phải được React xử lý:
-
-#### Step 1: Trigger a render
-
-Có hai lý do để một component render:
-
-- Đây là lần render ban đầu của thành phần.
-- Trạng thái của thành phần (hoặc một trong những tổ tiên của nó) đã được cập nhật.
-
-#### Step 2: React renders your components
-
-Sau khi kích hoạt render, React sẽ gọi các thành phần của bạn để tìm ra nội dung hiển thị trên màn hình. “Rendering” là React gọi các thành phần của bạn.
-
-- Khi render ban đầu, React sẽ gọi root component.
-- Đối với các lần render tiếp theo, React sẽ gọi hàm component mà việc cập nhật trạng thái đã kích hoạt render.
-
-Quá trình này là đệ quy: nếu thành phần được cập nhật trả về một thành phần khác, React sẽ hiển thị thành phần đó tiếp theo, và nếu thành phần đó cũng trả về một cái gì đó, nó sẽ hiển thị thành phần đó tiếp theo, và cứ như vậy
-
-#### Step 3: React cam kết thay đổi vào DOM
-
-Sau khi kết xuất (gọi) các thành phần, React sẽ sửa đổi DOM.
-
-- Đối với việc kết xuất ban đầu, React sẽ sử dụng `appendChild()` API DOM để đưa tất cả các nút DOM mà nó đã tạo ra lên màn hình.
-
-- Đối với việc re-renders, React sẽ áp dụng các thao tác tối thiểu cần thiết (được tính toán trong khi kết xuất!) để làm cho DOM khớp với đầu ra kết xuất mới nhất.
-
-### 7. References
+### 6. References
 
 - Hooks: https://react.dev/reference/react/hooks
 - Rules of React: https://react.dev/reference/rules

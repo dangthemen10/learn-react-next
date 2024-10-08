@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * 
+ * Example: Truyền dependencies array rỗng, có truyền dependencies và không cleanup
+ * 
+ */
+
 export default function DataFetcher() {
   const [data, setData] = useState(null);
   // const [isCheck, setIsCheck] = useState(false)
@@ -33,13 +39,17 @@ export default function DataFetcher() {
   )
 }
 
+/**
+ * 
+ * Example: Không truyền dependencies array
+ * 
+ */
 // export default function WindowResizeTracker() {
 //   const [windowWidth, setWindowWidth] = useState(0);
 
-//   console.log("WindowResizeTracker Rendering....");
-
 //   useEffect(() => {
 //     // Kiểm tra nếu code đang chạy trên client (trình duyệt)
+//     console.log("WindowResizeTracker Rendering....");
     
 //     if (typeof window !== "undefined") {
 //       setWindowWidth(window.innerWidth);
@@ -67,7 +77,11 @@ export default function DataFetcher() {
 
 
 
-// useEffect cần Cleanup 
+/**
+ * 
+ * Example: useEffect cần Cleanup 
+ * 
+ */
 
 // export default function TimerComponent() {
 //   const [count, setCount] = useState(0);
